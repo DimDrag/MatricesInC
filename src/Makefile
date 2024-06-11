@@ -49,6 +49,7 @@ gcov_report: test run_test
 	@rm -rf $(BUILD_DIR)/$(TESTS_DIR)/*
 	@lcov -f -d $(BUILD_DIR) -c -o report/report.info
 	@genhtml -o report report/report.info
+	open report/index.html
 
 clean:
 	rm -rf $(TARGET_LIB) $(TESTS_DIR)/$(TESTS_EXEC_FILE) report/*
